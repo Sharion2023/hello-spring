@@ -56,7 +56,8 @@ public class HelloController {
                 "</html>";
     }
 
-    @RequestMapping(method = RequestMethod.POST)
+    //@RequestMapping(method = RequestMethod.POST)
+    @PostMapping("/hello")
     @ResponseBody
     public String helloPost(@RequestParam String name, @RequestParam String language) {
         if(name == null) {
@@ -79,7 +80,7 @@ public class HelloController {
         } else if (l.equals("italian")) {
             greeting = "Ciao";
         }
-        return greeting + "," + n;
+        return greeting + " , " + n + "!";
     }
 
 }
