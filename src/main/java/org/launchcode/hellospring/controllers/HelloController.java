@@ -80,7 +80,12 @@ public class HelloController {
         } else if (l.equals("italian")) {
             greeting = "Ciao";
         }
-        return greeting + " , " + n + "!";
+        return
+                "<html>" +
+                        "<b>" +
+                greeting + ", " + n + "!" +
+                    "</b" +
+                "</html>";
     }
 
 }
